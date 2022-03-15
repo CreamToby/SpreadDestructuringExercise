@@ -45,8 +45,9 @@ const disneyJunior = [`Mickey Mouse Clubhouse`, `Spidey and His Amazing Friends`
 const [mickey, spidey] = disneyJunior;
 
 // 3c
-console.log(mickey);
-console.log(spidey);
+// console.log(mickey);
+// console.log(spidey);
+console.log(mickey, spidey);
 
 // 4a
 const avengers = {
@@ -58,8 +59,10 @@ const avengers = {
 const {warMachine, theHulk} = avengers;
 
 // 4c
-console.log(warMachine);
-console.log(theHulk);
+// 
+// console.log(warMachine);
+// console.log(theHulk);
+console.log(warMachine, theHulk);
 
 // 4d
 const moreAvengers = {
@@ -69,17 +72,20 @@ const moreAvengers = {
 };
 
 // 4e
-
-const {
+// 
+/*const {
     blackWidow: nat,
     hawkeye: cli,
     ironMan: ton
-} = moreAvengers;
+} = moreAvengers;*/
+const { blackWidow: nat, ...others} = moreAvengers;
 
 // 4f
-console.log(nat);
-console.log(cli);
-console.log(ton);
+// 
+// console.log(nat);
+// console.log(cli);
+// console.log(ton);
+console.log(nat, ...others);
 
 // BONUS
 const bonus = {
@@ -107,6 +113,40 @@ const bonus = {
 // const all = [fi, se, th];
 // console.log(all);
 
+// ANSWERS
+const {first, second, third} = bonus;
+const all = [...first, ...second, ...third];
+console.log(all);
 
+// or
+// const first = bonus.first;
+// const second = bonus.second;
+// const third = bonus.third;
+// const all = [...first, ...second, ...third];
+// console.log(all);
+
+// or
+// const all = [
+    // ...bonus[`first`],
+    // ...bonus[`second`],
+    // ...bonus[`third`]
+// ];
+// console.log(all);
+
+// or
+// const all = [
+    // ...bonus.first,
+    // ...bonus.second,
+    // ...bonus.third
+// ];
+// console.log(all);
 
 // 5b
+const [one, two, three, four, five, six, seven, eight, nine] = all;
+
+// or
+// const [one, two, three] = bonus.first;
+// const [four, five, six] = bonus.second;
+// const [seven, eight, nine] = bonus.third;
+
+console.log(one, two, three, four, five, six, seven, eight, nine);
